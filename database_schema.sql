@@ -1,0 +1,19 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "likes" (
+	"user"	INTEGER NOT NULL,
+	"team"	INTEGER NOT NULL,
+	"value"	INTEGER NOT NULL DEFAULT 0,
+	PRIMARY KEY("user","team")
+);
+CREATE TABLE IF NOT EXISTS "teams" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"user"	INTEGER NOT NULL,
+	"stage"	TEXT NOT NULL,
+	"position1"	INTEGER,
+	"position2"	INTEGER,
+	"position3"	INTEGER,
+	"position4"	INTEGER,
+	"position5"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+COMMIT;

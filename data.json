@@ -1,0 +1,457 @@
+{
+    "pictures": {
+        "positions": "https://cdn.discordapp.com/attachments/1141372237102981220/1142420052717600768/positions.png"
+    },
+    "colors": {
+        "yellow": {
+            "name": "Yellow",
+            "emoji": "<:green:1141343692104401009:>"
+        },"purple": {
+            "name": "Purple",
+            "emoji": "<:green:1141343692104401009:>"
+        },"red": {
+            "name": "Red",
+            "emoji": "<:green:1141343692104401009:>"
+        },"blue": {
+            "name": "Blue",
+            "emoji": "<:green:1141343692104401009:>"
+        },"green": {
+            "name": "Green",
+            "emoji": "<:green:1141343692104401009:>"
+        }
+    },
+    "champions": [
+        {
+            "id": 0,
+            "name": "[Fast Ship] Evan",
+            "rarity": "SSR+",
+            "color": "yellow"
+        },
+        {
+            "id": 1,
+            "name": "[Lightning Spear] Khun Mascheny",
+            "rarity": "SSR+",
+            "color": "purple"
+        },
+        {
+            "id": 2,
+            "name": "[Steel-Armored] Karaka",
+            "rarity": "SSR+",
+            "color": "purple"
+        },
+        {
+            "id": 3,
+            "name": "[Thorn] Viole",
+            "rarity": "SSR+",
+            "color": "red"
+        },
+        {
+            "id": 4,
+            "name": "[Hellfire] Evankhell",
+            "rarity": "SSR+",
+            "color": "red"
+        },
+        {
+            "id": 5,
+            "name": "[Data] Khun Mascheny",
+            "rarity": "SSR+",
+            "color": "blue"
+        },
+        {
+            "id": 6,
+            "name": "[Data] Zahard",
+            "rarity": "SSR+",
+            "color": "green"
+        },
+        {
+            "id": 7,
+            "name": "[Black March] Bam",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 8,
+            "name": "[Hunter] Rak",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 9,
+            "name": "[Dual Swords] Hatz",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 10,
+            "name": "[Deadly Martial Arts] Shibisu",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 11,
+            "name": "[Knight] Cheonhwa Hong",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 12,
+            "name": "[Forever Prepping] Wangnan Ja",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 13,
+            "name": "[Yellow Feathers] Gyetang",
+            "rarity": "SSR",
+            "color": "yellow"
+        },
+        {
+            "id": 14,
+            "name": "[Strategist] Khun Aguero",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 15,
+            "name": "[Young Girl] Rachel",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 16,
+            "name": "[Princess] Endorsi",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 17,
+            "name": "[Anima] Narae Seonwoo",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 18,
+            "name": "[Dark Abyss] Ghost",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 19,
+            "name": "[Bora Bora] Prince",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 20,
+            "name": "[Godfather] Lurker Kim",
+            "rarity": "SSR",
+            "color": "purple"
+        },
+        {
+            "id": 21,
+            "name": "[Destined Path] Hwaryun",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 22,
+            "name": "[Green April] Anaak",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 23,
+            "name": "[Red Wings] Amigocharz",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 24,
+            "name": "[Deep-Sea Fish] Hansung Yu",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 25,
+            "name": "[Musician] Yellowy",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 26,
+            "name": "[Black Horn] Arkraptor",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 27,
+            "name": "[Doctor] Michael",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 28,
+            "name": "[Maniacal] Xia Xia",
+            "rarity": "SSR",
+            "color": "red"
+        },
+        {
+            "id": 29,
+            "name": "[Tactician] Lero Ro",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 30,
+            "name": "[Black Fish] Quant",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 31,
+            "name": "[Gamer] Khun Hatzling",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 32,
+            "name": "[Disruptor] Kurdan",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 33,
+            "name": "[Wings of Destruction] Horyang Kang",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 34,
+            "name": "[Arsonist] Quaetro",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 35,
+            "name": "[One-eyed Wolf] Blarode",
+            "rarity": "SSR",
+            "color": "blue"
+        },
+        {
+            "id": 36,
+            "name": "[Red Rose] Ha Yuri",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 37,
+            "name": "[Insightful One] Laure",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 38,
+            "name": "[Proud Waves] Lozeal",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 39,
+            "name": "[Blooming Flower] Miseng Yeo",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 40,
+            "name": "[Pitcher] Mule Love",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 41,
+            "name": "[Speedster] Edin Dan",
+            "rarity": "SSR",
+            "color": "green"
+        },
+        {
+            "id": 42,
+            "name": "[Rapper] Dede Cancho",
+            "rarity": "SR",
+            "color": "yellow"
+        },
+        {
+            "id": 43,
+            "name": "[Void] Grey",
+            "rarity": "SR",
+            "color": "yellow"
+        },
+        {
+            "id": 44,
+            "name": "[Delivery Boy] Nya Nia",
+            "rarity": "SR",
+            "color": "yellow"
+        },
+        {
+            "id": 45,
+            "name": "[Punk] Blarouge",
+            "rarity": "SR",
+            "color": "purple"
+        },
+        {
+            "id": 46,
+            "name": "[Devil's Arm] Robdevil",
+            "rarity": "SR",
+            "color": "purple"
+        },
+        {
+            "id": 47,
+            "name": "[Flail] Tin",
+            "rarity": "SR",
+            "color": "purple"
+        },
+        {
+            "id": 48,
+            "name": "[Sky Bead] Hax",
+            "rarity": "SR",
+            "color": "red"
+        },
+        {
+            "id": 49,
+            "name": "[Imugi] Changsoo Yeon",
+            "rarity": "SR",
+            "color": "red"
+        },
+        {
+            "id": 50,
+            "name": "[Red Lighthouse] Apple",
+            "rarity": "SR",
+            "color": "red"
+        },
+        {
+            "id": 51,
+            "name": "[Thief] Serena",
+            "rarity": "SR",
+            "color": "blue"
+        },
+        {
+            "id": 52,
+            "name": "[Renegade] Hoh",
+            "rarity": "SR",
+            "color": "blue"
+        },
+        {
+            "id": 53,
+            "name": "[Survivor] Paracule",
+            "rarity": "SR",
+            "color": "blue"
+        },
+        {
+            "id": 54,
+            "name": "[Soft Rock] Bokdol Yu",
+            "rarity": "SR",
+            "color": "green"
+        },
+        {
+            "id": 55,
+            "name": "[Slugger] Leeron 3",
+            "rarity": "SR",
+            "color": "green"
+        },
+        {
+            "id": 56,
+            "name": "[South Wind] Chungchung",
+            "rarity": "SR",
+            "color": "green"
+        },
+        {
+            "id": 57,
+            "name": "[Prophet] Shopin",
+            "rarity": "R",
+            "color": "yellow"
+        },
+        {
+            "id": 58,
+            "name": "[Dual Swords] Kon",
+            "rarity": "R",
+            "color": "yellow"
+        },
+        {
+            "id": 59,
+            "name": "[Pink Knit Sweater] Goseng Yeo",
+            "rarity": "R",
+            "color": "yellow"
+        },
+        {
+            "id": 60,
+            "name": "[Grey Needle] Ryan",
+            "rarity": "R",
+            "color": "purple"
+        },
+        {
+            "id": 61,
+            "name": "[Spear Thrower] Mauchi",
+            "rarity": "R",
+            "color": "purple"
+        },
+        {
+            "id": 62,
+            "name": "[Gemmed Rings] Yeongsuk",
+            "rarity": "R",
+            "color": "purple"
+        },
+        {
+            "id": 63,
+            "name": "[Sniper] Levin",
+            "rarity": "R",
+            "color": "red"
+        },
+        {
+            "id": 64,
+            "name": "[Dark Spirit] Katan",
+            "rarity": "R",
+            "color": "red"
+        },
+        {
+            "id": 65,
+            "name": "[Four-eyed Swordsman] Palgyeon",
+            "rarity": "R",
+            "color": "red"
+        },
+        {
+            "id": 66,
+            "name": "[One Strike] Super Dude",
+            "rarity": "R",
+            "color": "blue"
+        },
+        {
+            "id": 67,
+            "name": "[One-eyed Swordsman] Deod",
+            "rarity": "R",
+            "color": "blue"
+        },
+        {
+            "id": 68,
+            "name": "[Challenger] Leo",
+            "rarity": "R",
+            "color": "blue"
+        },
+        {
+            "id": 69,
+            "name": "Man of Virtue] Hyun Seoung",
+            "rarity": "R",
+            "color": "green"
+        },
+        {
+            "id": 70,
+            "name": "[Guns Akimbo] Chichi",
+            "rarity": "R",
+            "color": "green"
+        },
+        {
+            "id": 71,
+            "name": "[Honorable Brother] Noma",
+            "rarity": "R",
+            "color": "green"
+        }
+    ]
+}
