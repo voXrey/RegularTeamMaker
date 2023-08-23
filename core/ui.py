@@ -83,7 +83,8 @@ class ValidateButton(discord.ui.Button['ValidateButton']):
                         await interaction.response.edit_message(embed=None, content=f"Team shared with id `#{team.id}` !", view=None)
                     else:
                         team:Team = db.get_team_with_stage_and_positions(self.view.stage, self.view.positions)
-                        await interaction.response.edit_message(embed=None, content=f"Team does already exist with id `#{team.id}`...", view=None)
+                        with Database() as db: db.add_like(Like(self.view.user, team.id, 1))
+                        await interaction.response.edit_message(embed=None, content=f"Team does already exist with id `#{team.id}`, you liked it!", view=None)
                 return
         await interaction.response.edit_message(embed=None, content="You need to select 1 champion or more...", view=None)
 

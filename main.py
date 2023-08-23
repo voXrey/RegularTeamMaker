@@ -3,22 +3,22 @@ import os
 import discord
 from discord import app_commands
 
-from core import (Database, Like, LikesView, SelectChampionsView, Team,
+from core import (Database, LikesView, SelectChampionsView, Team,
                   data_dict, exceptions, format_stage, is_valid_stage,
-                  search_champions, see_team_message_builder,
+                  see_team_message_builder,
                   select_champions_message_builder)
-
-MY_GUILD = discord.Object(id=914554436926447636)
 
 
 class MyClient(discord.Client):
     def __init__(self, *, intents: discord.Intents):
+        self.MY_GUILD = discord.Object(id=str(os.getenv("MY_GUILD")))
+
         super().__init__(intents=intents)
         self.tree = app_commands.CommandTree(self)
 
     async def setup_hook(self):
-        self.tree.copy_global_to(guild=MY_GUILD)
-        await self.tree.sync(guild=MY_GUILD)
+        self.tree.copy_global_to(guild=self.MY_GUILD)
+        await self.tree.sync(guild=self.MY_GUILD)
 
 intents = discord.Intents.default()
 client = MyClient(intents=intents)
@@ -27,6 +27,16 @@ client = MyClient(intents=intents)
 async def on_ready():
     print(f'Logged in as {client.user} (ID: {client.user.id})')
     print('------')
+
+
+@client.tree.command(name="help", description="See the commands list")
+async def help(interaction:discord.Interaction):
+    description = "`help` : show this message\n\
+                   `create-team` : create and share a new team\n\
+                   `team` : see a team\n\
+                   `delete-team` : delete one of your shared teams\n\
+                   `stage` : see top 30 of most popular teams for a stage"
+
 
 @client.tree.command(name="create-team", description="Create and share a team for a specific stage")
 @app_commands.describe(stage='Stage concerned by this team in the format "[floor][stape]"')
@@ -93,6 +103,9 @@ async def stage(interaction:discord.Interaction, stage:str):
         return await interaction.response.send_message("This stage is not valid...", ephemeral=True)
     
     with Database() as db: teams = db.get_teams_with_stage(stage)
+    if len(teams) == 0: return await interaction.response.send_message("There is no team for this stage...", ephemeral=True)
+    teams = teams[:30]
+
     teams_with_likes = []
 
     for team in teams:
@@ -102,10 +115,16 @@ async def stage(interaction:discord.Interaction, stage:str):
     text = ""
     rank = 1
     for team, likes in leaderboard:
-        text += f"**{rank}.** `#{team.id}` ({likes})\n"
+        text += f"**{rank}.** Team `#{team.id}` ➜ {likes} "
+        if likes > 0: text += "🔺"
+        elif likes < 0: text += "🔻"
+        else: text += "🔸"
+        text += "\n"
+
         rank += 1
 
-    await interaction.response.send_message(text, ephemeral=True)
+    embed = discord.Embed(title=f"Top stage {stage} teams", description=text, color=discord.Color.blurple())
+    await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 
