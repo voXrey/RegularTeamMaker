@@ -31,11 +31,20 @@ async def on_ready():
 
 @client.tree.command(name="help", description="See the commands list")
 async def help(interaction:discord.Interaction):
-    description = "`help` : show this message\n\
+    description = "## Commands\n\
+                   `help` : show this message\n\
                    `create-team` : create and share a new team\n\
                    `team` : see a team\n\
                    `delete-team` : delete one of your shared teams\n\
-                   `stage` : see top 30 of most popular teams for a stage"
+                   `stage` : see top 30 of most popular teams for a stage\n\n\
+                    ## Useful links\n\
+                    > [Discord ToS](https://discord.com/terms)\n\
+                    > [Bot ToS](https://github.com/voXrey/RegularTeamMaker)\n\
+                    > [Bot Privacy Policy](https://github.com/voXrey/RegularTeamMaker)\n\
+                    > [Support server](https://discord.gg/BqJYGtxRbA)\n"
+
+    embed = discord.Embed(title="Help page", description=description, color=discord.Color.blurple())
+    await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 @client.tree.command(name="create-team", description="Create and share a team for a specific stage")
