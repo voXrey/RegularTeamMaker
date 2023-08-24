@@ -93,7 +93,9 @@ class Database(object):
     def add_like(self, like:Like):
         try:
             like_ = self.get_like(like.user, like.team_id)
-            if like_.value != like.value: self.cursor.execute("UPDATE likes SET value=? WHERE user=? AND team=?", (like.value, like.user, like.team_id))
+            if like_.value != like.value:
+                if like.value == 0: self.cursor.execute("DELETE FROM likes WHERE user=? AND team=?", (like.user, like.team_id))
+                else: self.cursor.execute("UPDATE likes SET value=? WHERE user=? AND team=?", (like.value, like.user, like.team_id))
         except LikeNotFound:
             self.cursor.execute("INSERT INTO likes(user, team, value) VALUES(?, ?, ?)", (like.user, like.team_id, like.value))
 
