@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 
 import discord
 from discord import app_commands
@@ -11,7 +12,7 @@ from core import (Database, LikesView, SelectChampionsView, Team,
 
 class MyClient(discord.Client):
     def __init__(self, *, intents: discord.Intents):
-        self.MY_GUILD = discord.Object(id=str(os.getenv("MY_GUILD")))
+        self.MY_GUILD = discord.Object(id=int(os.getenv("MY_GUILD")))
 
         super().__init__(intents=intents)
         self.tree = app_commands.CommandTree(self)
@@ -20,6 +21,7 @@ class MyClient(discord.Client):
         self.tree.copy_global_to(guild=self.MY_GUILD)
         await self.tree.sync(guild=self.MY_GUILD)
 
+load_dotenv()
 intents = discord.Intents.default()
 client = MyClient(intents=intents)
 
@@ -28,6 +30,13 @@ async def on_ready():
     print(f'Logged in as {client.user} (ID: {client.user.id})')
     print('------')
 
+@client.tree.command(name='sync', description='Owner only')
+async def sync(interaction: discord.Interaction):
+    if interaction.user.id == 625441412716167178:
+        await client.tree.sync()
+        print('Command tree synced.')
+    else:
+        await interaction.response.send_message('You must be the owner to use this command!')
 
 @client.tree.command(name="help", description="See the commands list")
 async def help(interaction:discord.Interaction):
@@ -42,7 +51,7 @@ async def help(interaction:discord.Interaction):
 > [Bot ToS](https://github.com/voXrey/RegularTeamMaker)\n\
 > [Bot Privacy Policy](https://github.com/voXrey/RegularTeamMaker)\n\
 > [Support server](https://discord.gg/BqJYGtxRbA)\n\
-> [Bot Invite](https://discord.com/api/oauth2/authorize?client_id=1144224131307540480&permissions=274877958144&scope=bot%20applications.commands)"
+> [Bot Invite](https://discord.com/api/oauth2/authorize?client_id=1144224131307540480&permissions=274878220288&scope=bot%20applications.commands)"
     embed = discord.Embed(title="Help page", description=description, color=discord.Color.blurple())
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
