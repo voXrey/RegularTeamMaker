@@ -1,5 +1,6 @@
 # RegularTeamMaker
-A discord bot to create and share teams for the game Tower Of God New World
+A discord bot to create and share teams for the game Tower Of God New World.
+You can invite our self-hosted bot with this [link](https://discord.com/api/oauth2/authorize?client_id=1144224131307540480&permissions=274877958144&scope=bot%20applications.commands) after reading the ToS
 
 ## Terms of Service
 This bot is hosted by myself to provide an easy and helpful service. This is why certain points need to be clarified on the use of this service (this only concerns the bot that I host myself with the application identifier `1144224131307540480`). If the bot is on your server, you agree to respect these conditions otherwise you must remove it **immediately**.
