@@ -5,19 +5,23 @@
     "colors": {
         "yellow": {
             "name": "Yellow",
-            "emoji": "<:green:1141343692104401009:>"
-        },"purple": {
+            "emoji": "<:yellow:1144687491731955742:>"
+        },
+        "purple": {
             "name": "Purple",
-            "emoji": "<:green:1141343692104401009:>"
-        },"red": {
+            "emoji": "<:purple:1144687481971806219:>"
+        },
+        "red": {
             "name": "Red",
-            "emoji": "<:green:1141343692104401009:>"
-        },"blue": {
+            "emoji": "<:red:1144687501102030949:>"
+        },
+        "blue": {
             "name": "Blue",
-            "emoji": "<:green:1141343692104401009:>"
-        },"green": {
+            "emoji": "<:blue:1144687472337485864:>"
+        },
+        "green": {
             "name": "Green",
-            "emoji": "<:green:1141343692104401009:>"
+            "emoji": "<:green:1144687454100668568:>"
         }
     },
     "champions": [
